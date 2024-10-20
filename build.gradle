@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'net.java.dev.jna:jna:5.14.0'
+    implementation 'net.java.dev.jna:jna-platform:5.14.0'
+    implementation 'com.github.kwhat:jnativehook:2.2.2'
+    implementation 'com.badlogicgames.gdx:gdx:0.9.9'
+    implementation 'com.badlogicgames.gdx:gdx-backend-lwjgl:1.12.1'
+    implementation 'com.badlogicgames.gdx:gdx-platform:0.9.9:natives-desktop'
+    implementation 'it.unimi.dsi:fastutil:8.5.13'
+}
+
+test {
+    useJUnitPlatform()
+}
